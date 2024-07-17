@@ -53,8 +53,19 @@ export default function Page() {
         <button
           class="self-center border rounded px-3 py-1 bg-emerald-500 text-white border-emerald-300 transition active:scale-95"
           onClick={() => {
+            const _items = unwrap(items);
+
             openCheckout({
-              items: items,
+              items: _items,
+              customer: {
+                email: "test@example.com",
+                address: {
+                  city: "Tokyo",
+                  countryCode: "JP",
+                  firstLine: "Shinjuku, Minato-ku",
+                  region: "Tokyo",
+                },
+              },
             });
           }}
         >
@@ -80,7 +91,7 @@ export default function Page() {
 // ===========================================================================
 
 import { For, mergeProps, VoidProps } from "solid-js";
-import { createStore, produce } from "solid-js/store";
+import { createStore, produce, unwrap } from "solid-js/store";
 
 type ProductCardProps = {
   id: string;

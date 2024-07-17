@@ -37,7 +37,6 @@ export const PaddleContextProvider: FlowComponent = (props) => {
     const Paddle = await import("@paddle/paddle-js");
 
     Paddle.initializePaddle({
-      // seller: Number(publicConfig.PADDLE_SELLER_ID),
       token: publicConfig.PADDLE_CLIENT_SIDE_TOKEN,
       environment: publicConfig.NODE_ENV === "development" ? "sandbox" : "production",
     }).then((_paddle) => {
