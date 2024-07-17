@@ -1,4 +1,7 @@
-# stripe-solid-example
+# paddle-solid-example
+
+> [!WARNING]
+> Currently WIP. I'm using this to learn at the moment but will polish it out as my standard for integrating payments with Paddle.
 
 > This was bootstrapped with [Solid Hop](https://github.com/blankeos/solid-hop).
 
